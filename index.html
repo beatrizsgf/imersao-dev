@@ -4,43 +4,230 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Base de conhecimento</title>
+    <title>Lab de Conexões de Habilidades</title>
 </head>
 <body>
     <header>
-        <h1>Base de conhecimento</h1>
-        <div>
-            <input type="text" placeholder="Digite uma linguagem de programação">
+        <h1>Lab de Conexões de Habilidades</h1>
+        <div class="search">
+            <input type="text" placeholder="Buscar" aria-label="Campo de busca">
             <button id="botao-busca" onclick="iniciarBusca()">Buscar</button>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema" title="Alternar tema">🌙</button>
+        </div>
+        <div class="header-art" aria-hidden="true">
+            <!-- Decorative line-art / drawing-style SVG (low contrast, decorative) -->
+            <svg width="240" height="120" viewBox="0 0 240 120" fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
+                <g fill="currentColor" opacity="0.9">
+                    <ellipse cx="188" cy="36" rx="44" ry="28" />
+                    <ellipse cx="208" cy="78" rx="28" ry="18" />
+                </g>
+                <g stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.6">
+                    <path d="M38 84c12-10 26-18 44-18s32 8 44 18" fill="none" />
+                    <path d="M86 56c6-12 18-18 30-18s24 6 30 18" fill="none" />
+                </g>
+            </svg>
         </div>
     </header>
 
     <main>
-        <section class="card-container">
-            <!-- <article class="card">
-                <h2>JavaScript</h2>
-                <p>1995</p>
-                <p>JavaScript é uma linguagem de programação</p>
-                <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">Saiba mais</a>
-            </article>
+        <section id="about" class="intro">
+            <h2>Quem Somos</h2>
+            <p class="lead">Onde Gerações Se Encontram Para Crescer Juntas.</p>
+            <div class="intro-media">
+                <!-- Realistic modern photo (fixed) -->
+                <img class="intro-img" src="https://images.unsplash.com/photo-1685609241645-c921192b5cc0?auto=format&fit=crop&w=1600&q=80" alt="Pessoas de diferentes idades trocando conhecimentos" loading="lazy" decoding="async" width="1100" height="720">
+            </div>
+            <div class="intro-text">
+                <p>Somos responsáveis por fornecer uma troca de conhecimento entre gerações em três áreas principais, desde temas que utilizamos no cotidiano, hobbies e até mesmo sobre tecnologia! </p>
+                <p>Você já parou para pensar em todo o conhecimento que está sendo perdido? A receita da sua avó, a técnica de negociação que só a experiência ensina, ou o domínio das ferramentas digitais que só a juventude entende?</p>
+                <p>O Lab de Conexões de Habilidades nasceu de uma ideia simples e poderosa: o maior valor que temos está nas nossas experiências, e elas precisam ser compartilhadas.</p>
+                <p>Confira em nosso site todos os recursos listados e aproveite para aprimorar seus conhecimentos em diversos assuntos.</p>
+            </div>
+        </section>
+        <section id="services" class="services">
+            <h2>Nossos Serviços</h2>
+            <p class="services-desc">Reunimos oportunidades de troca entre gerações em três áreas principais — escolha uma e saiba como participar.</p>
 
-            <article class="card">
-                <h2>Python</h2>
-                <p>1991</p>
-                <p>Python é uma linguagem de programação</p>
-                <a href="https://docs.python.org/3/" target="_blank">Saiba mais</a>
-            </article> -->
+            <div class="service-grid">
+                <a class="service-card" href="#tech" title="Tecnologia e Cultura Digital">
+                    <div class="service-icon">💻</div>
+                    <h3>Tecnologia e Cultura Digital</h3>
+                    <p>Geração mais jovem ensina plataformas, segurança digital e ferramentas conectadas.</p>
+                    <span class="service-cta">Ver quadro →</span>
+                </a>
+
+                <a class="service-card" href="#skills" title="Habilidades Práticas e Tradições">
+                    <div class="service-icon">🛠️</div>
+                    <h3>Habilidades Práticas e Tradições</h3>
+                    <p>Ofícios, receitas e técnicas tradicionais para aprendizado prático e troca de saberes.</p>
+                    <span class="service-cta">Ver quadro →</span>
+                </a>
+
+                <a class="service-card" href="#wellbeing" title="Bem-Estar e Hobbies">
+                    <div class="service-icon">🌿</div>
+                    <h3>Bem-Estar e Hobbies</h3>
+                    <p>Atividades para bem-estar, hobbies criativos e projetos que aproximam gerações.</p>
+                    <span class="service-cta">Ver quadro →</span>
+                </a>
+            </div>
+        </section>
+        <section id="tech" class="theme-section">
+            <h2>Tecnologia e Cultura Digital (Geração mais Jovem Ensina)</h2>
+            <p>Explora tendências digitais, plataformas, ferramentas e reflexões sobre cultura na era conectada.</p>
+            <ul>
+                <li>Notícias e tendências tecnológicas</li>
+                <li>Ferramentas e tutoriais</li>
+                <li>Debates sobre ética e sociedade digital</li>
+            </ul>
+            
+                <!-- Tabela comparativa inspirada no layout fornecido -->
+                <div class="comparison">
+                    <div class="comparison-title">
+                        <span class="icon">💡</span>
+                        <strong>Tecnologia e Cultura Digital</strong>
+                        <span class="muted">(Geração mais Jovem Ensina)</span>
+                    </div>
+                    <div class="comp-grid" role="table" aria-label="Tabela de comparação">
+                        <div class="comp-cell comp-head">Tema da Conexão</div>
+                        <div class="comp-cell comp-head">O que o Jovem Ensina</div>
+                        <div class="comp-cell comp-head">O que a Geração Mais Velha Ganha</div>
+
+                        <div class="comp-cell">Segurança Digital e Scam (Golpes)</div>
+                        <div class="comp-cell">Reconhecer <em>phishing</em>, configurar autenticação de dois fatores, limpar arquivos.</div>
+                        <div class="comp-cell">Proteção contra fraudes financeiras e roubo de dados, maior autonomia online.</div>
+
+                        <div class="comp-cell">Redes Sociais e Comunicação Online</div>
+                        <div class="comp-cell">Como usar Instagram/TikTok, fazer chamadas de vídeo (Zoom/Meet), criar perfis.</div>
+                        <div class="comp-cell">Conexão com netos e parentes distantes, combate ao isolamento social.</div>
+
+                        <div class="comp-cell">Streaming e Consumo de Mídia</div>
+                        <div class="comp-cell">Como usar Netflix, Spotify, podcasts e canais de YouTube.</div>
+                        <div class="comp-cell">Acesso fácil a entretenimento e informação de qualidade.</div>
+                    </div>
+                    </div>
+                <div class="tech-media">
+                    <figure>
+                            <a href="https://media.istockphoto.com/id/1847335324/pt/foto/woman-senior-mom-and-laptop-with-teaching-reading-and-typing-for-email-notification-web-or.jpg?s=2048x2048&w=is&k=20&c=XtOEI6SjDV1-QB0Tnf0xyHqCsguonT-UvxZJRtdX4Z4=" target="_blank" rel="noopener noreferrer">
+                                <img class="tech-img" src="assets/secao-tecnologia.jpg" alt="Pessoa idosa e jovem com laptop — imagem da seção Tecnologia." loading="lazy" decoding="async" width="1400" height="900" onerror="this.onerror=null;this.src='https://media.istockphoto.com/id/1847335324/pt/foto/woman-senior-mom-and-laptop-with-teaching-reading-and-typing-for-email-notification-web-or.jpg?s=2048x2048&w=is&k=20&c=XtOEI6SjDV1-QB0Tnf0xyHqCsguonT-UvxZJRtdX4Z4='">
+                            </a>
+                        <figcaption class="tech-credit">
+                            <p class="media-desc">Exemplo de aula de Tecnologia - Outubro de 2025.</p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="actions">
+                    <a class="btn primary" href="https://www.google.com/search?q=aula+de+tecnologia&rlz=1C1BNSD_pt-BRBR947BR947&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIGCAcQRRg80gEINDkwOWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8&udm=50&fbs=AIIjpHydJdUtNKrM02hj0s4nbm4yAFb4PvhjIUcDtaFHkK_tyspyDJg0-Y4Ji8bGEtEDNJEln5giDuPCfRsSET1KCv03uShb3IBsgCyN07eNfdFpl0RG2Iqz3cc4P70V8iJchYZnsMrB87_B2XqhToOq68CEsRijKuWdW2ELvQN03BNC3_O6ogQdqDva-15_l-1aKKkuurxJUG1jElmtGaZLdXsQiHPYAg&ved=2ahUKEwjC_Yu4jYmRAxUspJUCHaeCPEsQ0NsOegUI1wEQAA&aep=10&ntc=1&mstk=AUtExfB3OFWAEA-8cww4rkjNW6tJ_Pu5IczKOWvIqRPVWip61Tc6_qtTb10FPgT2s23KluO54ags9pvolqzrDQDfgh_XQ1I1VhPgXR44xli-gUWN8-DL8emxbVxF5qzdryPAV6QbeOYOl9yipzJod0W43JZ4-O_XtPzaQ5speTCFnIqReByGYk-GchuDdLkWQ36zCzR6LwzdOvqBNthX7vHU12cbvm4TD91WQV8R1hx1D_ZVdrMlhNlW7xq6uVHMD4lYcVg8Hkv1QCb81yv0pb2BHzVxfdczJz8fe5K204T1F-5m-88Duw0AWZqcdOj2YtEEy2iEKT-GuR6_ig&csuir=1&mtid=q20jaZH0Lsfe1sQPsqiuAQ" target="_blank" aria-label="Visitar MDN">
+                        <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79L20 21.5 21.5 20l-6-6zM10 15a5 5 0 110-10 5 5 0 010 10z"/></svg>
+                        Saiba mais
+                    </a>
+                </div>
+        </section>
+
+        <section id="skills" class="theme-section">
+            <h2>Habilidades Práticas e Tradições</h2>
+            <p>Conteúdo prático sobre ofícios, técnicas manuais, receitas e preservação de saberes tradicionais.</p>
+            <ul>
+                <li>Tutoriais passo a passo</li>
+                <li>Projetos "faça você mesmo"</li>
+                <li>Histórias e contextos culturais</li>
+            </ul>
+            <div class="comparison">
+                <div class="comparison-title">
+                    <span class="icon">💡</span>
+                    <strong>Habilidades Práticas e Tradições</strong>
+                    <span class="muted">(Geração Mais Velha Ensina)</span>
+                </div>
+                <div class="comp-grid" role="table" aria-label="Tabela de habilidades">
+                    <div class="comp-cell comp-head">Tema da Conexão</div>
+                    <div class="comp-cell comp-head">O que a Geração Mais Velha Ensina</div>
+                    <div class="comp-cell comp-head">O que o Jovem Ganha</div>
+
+                    <div class="comp-cell">Finanças Pessoais Básicas</div>
+                    <div class="comp-cell">Planejamento orçamentário sem apps, economia doméstica, investimento a longo prazo (old school).</div>
+                    <div class="comp-cell">Noções sólidas de dinheiro e paciência financeira, algo que a escola nem sempre ensina.</div>
+
+                    <div class="comp-cell">Conserto e Manutenção (DIY)</div>
+                    <div class="comp-cell">Pequenos reparos domésticos, costura básica, marcenaria simples, mecânica de carro/bike.</div>
+                    <div class="comp-cell">Independência, sustentabilidade (reparar em vez de descartar), redução de custos.</div>
+
+                    <div class="comp-cell">Culinária de Raiz e Receitas</div>
+                    <div class="comp-cell">Técnicas culinárias tradicionais, receitas de família, conservas e geleias.</div>
+                    <div class="comp-cell">Preservação cultural, habilidades de nutrição e sabor autêntico.</div>
+                </div>
+                <div class="comparison-footer">
+                    </div>
+                    <div class="skills-media">
+                        <figure>
+                            <a href="https://media.istockphoto.com/id/1450132699/pt/foto/chef-teaching-students-during-cooking-class.jpg?s=1024x1024&w=is&k=20&c=GtKH-xvKxKxqMvRaMnaAmfZLN6x_ypytkYh2icf_KfM=" target="_blank" rel="noopener noreferrer">
+                                <img class="tech-img" src="assets/secao-culinaria.jpg" alt="Aula de culinária — imagem da seção Habilidades Práticas." loading="lazy" decoding="async" width="1400" height="900" onerror="this.onerror=null;this.src='https://media.istockphoto.com/id/1450132699/pt/foto/chef-teaching-students-during-cooking-class.jpg?s=1024x1024&w=is&k=20&c=GtKH-xvKxKxqMvRaMnaAmfZLN6x_ypytkYh2icf_KfM='">
+                            </a>
+                        </figure>
+                        <figcaption class="tech-credit">
+                            <p class="media-desc">Exemplo de aula de Culinária e Receitas - Novembro de 2025.</p>
+                        </figcaption>
+                        </div>
+                <div class="actions">
+                <a class="btn primary" href="https://br.learncafe.com/cursos-online/gastronomia-e-culinaria" target="_blank" aria-label="Ver tutoriais Instructables">
+                    <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M22.7 19.3l-7.4-7.4c.6-1.1.7-2.4.1-3.6-1.1-2.6-4.3-3.5-6.9-2.1-1 .5-1.9 1.4-2.4 2.4-1.4 2.6-.5 5.8 2.1 6.9 1.2.6 2.5.5 3.6-.1l7.4 7.4 3.5-3.5z"/></svg>
+                    Tutoriais
+                </a>
+            </div>
+        </section>
+
+        <section id="wellbeing" class="theme-section">
+            <h2>Bem-Estar e Hobbies</h2>
+            <p>Dicas de autocuidado, lazer criativo e recomendações para contar com momentos de relaxamento.</p>
+            <ul>
+                <li>Rotinas saudáveis</li>
+                <li>Hobbies e atividades para relaxar</li>
+                <li>Leituras e recursos recomendados</li>
+            </ul>
+            <div class="comparison">
+                <div class="comparison-title">
+                    <span class="icon">💡</span>
+                    <strong>Bem-Estar e Hobbies</strong>
+                    <span class="muted">(Troca Mútua)</span>
+                </div>
+                <div class="comp-grid" role="table" aria-label="Tabela de bem estar">
+                    <div class="comp-cell comp-head">Tema da Conexão</div>
+                    <div class="comp-cell comp-head">Como Funciona a Troca</div>
+                    <div class="comp-cell comp-head">Valor para o Site</div>
+
+                    <div class="comp-cell">Jardinagem Urbana Sustentável</div>
+                    <div class="comp-cell">Um ensina técnicas de cultivo, o outro ensina a criar um "Diário de Planta" digital e automatizado.</div>
+                    <div class="comp-cell">Engajamento e foco na Sustentabilidade Digital (tendência forte).</div>
+
+                    <div class="comp-cell">Contação de Histórias / Memórias</div>
+                    <div class="comp-cell">O idoso conta uma história de vida; o jovem o ajuda a gravar um podcast simples ou a diagramar um e-book de memórias.</div>
+                    <div class="comp-cell">Criação de Legado (conteúdo valioso) e desenvolvimento de Habilidades de Storytelling.</div>
+                </div>
+            </div>
+            <div class="skills-media">
+                        <figure>
+                            <a href="https://www.iberdrola.com/documents/20125/39916/Huertos_746x419_Huerto.jpg/37eeb4fa-af04-1711-b3d7-9e749f5a1e84?t=1626678081336" target="_blank" rel="noopener noreferrer">
+                                <img class="tech-img" src="assets/secao-jardinagem.jpg" alt="Aula de culinária — imagem da seção Habilidades Práticas." loading="lazy" decoding="async" width="1400" height="900" onerror="this.onerror=null;this.src='https://www.iberdrola.com/documents/20125/39916/Huertos_746x419_Huerto.jpg/37eeb4fa-af04-1711-b3d7-9e749f5a1e84?t=1626678081336'">
+                            </a>
+                        </figure>
+                        <figcaption class="tech-credit">
+                            <p class="media-desc">Exemplo de aula de Jardinagem Urbana Sustentável - Setembro de 2025.</p>
+                        </figcaption>
+                        </div>
+            <div class="actions">
+                <a class="btn primary" href="https://semprebem.paguemenos.com.br/posts/mente-e-comportamento/lista-de-hobbies" target="_blank" aria-label="Visitar site da OMS">
+                    <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M12 21s-7.5-4.9-9.4-7.2C.7 11.3 1.6 7 5.3 5.6 7.2 4.8 9.6 5.5 12 8c2.4-2.5 4.8-3.2 6.7-2.4 3.7 1.4 4.6 5.7 2.7 8.2C19.5 16.1 12 21 12 21z"/></svg>
+                    Recursos de bem-estar
+                </a>
+            </div>
         </section>
     </main>
 
-    <footer>
     <footer class="footer">
         <ul class="footer-links">
             <li>
-                <a href="https://github.com/guilhermeonrails">GitHub</a>
+                <a href="https://github.com/beatrizsgf">GitHub</a>
             </li>
             <li>
-                <a href="https://www.alura.com.br/">Alura</a>
+                <a href="https://www.linkedin.com/in/beatriz-gon%C3%A7alves-2098b7121/">Linkedin</a>
             </li>
         </ul>
     </footer>
